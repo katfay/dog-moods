@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Dog mood tracker 🐾 🌈 🌩 🎻 (🍦JS)</title>
+  </head>
+  <body>
+    <div class="test-border main-container">
+      <div class="banner">
+        <header class="site-banner">Dog mood tracker 🐾 🌈 🌩 🎻 (🍦JS) dashboard</header>
+      </div>
+      <div class="add-button-div" id="addButtonWrap">
+        <button class="add-button" type="button" id="addButton">
+          Add (button)
+        </button>
+      </div>
+      <!-- The popup div wraps the add expense popup and visibility is toggled by the 'Add' button (Vanilla JS) -->
+      <div class="popup" id="popUpWrap">
+        <div class="add-expense-popup">
+          <h1>Add an expense (pop-up)</h1>
+          <form id="expense" action="" method="">
+            <label for="expense-select" class="label-newline" >
+              Expense type
+            </label>
+            <select name="mood" id="">
+              <option value="">--What mood is your good boy showing?--</option>
+              <option value="">Sulk</option>
+              <option value="">Cry</option>
+              <option value="">Growl</option>
+              <option value="">Pathos</option>
+              <option value="">Scream</option>
+              <option value="">Delight</option>
+              <option value="">Pride</option>
+              <option value="">Joy</option>
+              <option value="">Hypervigilance</option>
+              <option value="">Flat</option>
+              <option value="">Huff</option>
+              <option value="">Indignance</option>
+              <option value="">Outrage</option>
+              <option value="">Pure outrage</option>
+              <option value="">Cuddles</option>
+              <option value="">Excitement</option>
+            </select>
+            <label for="amountEntered" class="label-newline"> Amount </label>
+            <input name="amount" id="amountEntered" type="string" placeholder="$0" />
+            <label for="dateEntered" class="label-newline"> Date </label>
+            <input name="date" id="dateEntered" type="date" placeholder="Date" />
+            <label for="messageEntered" class="label-newline"> Notes </label>
+            <input
+            name="notes"  
+            id="messageEntered"
+              type="text"
+              placeholder="e.g. 'Developed near fear: foam rollers 🤷🏼‍♀️ 🐾 💔'"
+            />
+          <input value="Add your expense" type="submit" id="addExpense">
+            </form>
+          </button>
+        </div>
+      </div>
+      <div class="test-border dashboard">
+        <div class="dashboard-heading">
+          <span class="wider">Expense type</span> <span>Amount</span>
+          <span>Date</span>
+          <span class="wider">Notes</span>
+        </div>
+        <div class="dashboard-results" id="">
+          <!-- <div>Placeholder wrapper for show/hiding mood information</div> -->
+          <div class="wider" id="expenseTypes">placeholder</div>
+          <div class="" id="expenseAmounts">placeholder</div>
+          <div class="" id="expenseDates">placeholder</div>
+          <div class="wider" id="expenseNotes">placeholder</div>
+        </div>  
+        <div>
+          <button class="" type="button" id="showButton">
+          Show Duncan's mood dashboard (button)
+          </button>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

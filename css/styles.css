@@ -1,0 +1,131 @@
+.test-border {
+  border: solid 1px salmon;
+}
+
+.main-container {
+  margin: 5%;
+  display: flex;
+  flex-flow: column;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  min-width: 100%;
+}
+
+.add-button-div {
+  display: flex;
+  justify-content: center;
+}
+
+.add-button,
+.expense-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-width: 30vh;
+  min-height: 10vh;
+  margin: 5%;
+  padding: 2%;
+  border-radius: 10px;
+  border-style: none;
+}
+
+.add-expense-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: center;
+  max-width: 500px;
+  margin: 1%;
+  border: solid 1px silver;
+  font-family: sans-serif;
+  background-color: bisque;
+}
+
+.label-newline,
+select,
+input {
+  display: block;
+  margin: 0.5rem;
+}
+
+select,
+input {
+  min-height: 2rem;
+  text-align: center;
+}
+
+.banner {
+  margin: 1%;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 1%;
+}
+
+.dashboard .dashboard-heading {
+  font-weight: bold;
+  display: flex;
+}
+/* Setting min. width for headings of expense results */
+.dashboard .dashboard-heading span {
+  display: flex;
+  min-width: 20%;
+  /* border: 1px red solid; */
+}
+
+/* Giving more room (width) for contents of expense type and notes headings and lists */
+.dashboard .dashboard-heading .wider,
+.dashboard .dashboard-results .wider {
+  min-width: 30%;
+}
+
+/* So that div containers in the results dashboard are side-by-side and fill out the available space */
+.dashboard .dashboard-results {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+/* Setting min. width for all side-by-side expense results divs */
+.dashboard .dashboard-results div {
+  /* display: inline-block; */
+  min-width: 20%;
+  vertical-align: top;
+}
+
+.popup {
+  /* display: flex; */
+  display: none;
+  justify-content: center;
+  border: solid 2px paleturquoise;
+}
+
+.site-banner {
+  background-color: pink;
+  align-self: stretch;
+  text-align: center;
+}
+
+/* .wider {
+  min-width: 30%;
+} */
+
+@media (min-width: 600px) {
+  .add-button button {
+    min-width: 7.5rem;
+    margin: 0;
+  }
+}
