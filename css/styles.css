@@ -26,7 +26,8 @@ form {
 }
 
 .add-button,
-.expense-button {
+.expense-button,
+.next-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,13 +52,6 @@ form {
   background-color: bisque;
 }
 
-.label-newline,
-select,
-input {
-  display: block;
-  margin: 0.5rem;
-}
-
 select,
 input {
   min-height: 2rem;
@@ -66,6 +60,19 @@ input {
 
 .banner {
   margin: 1%;
+}
+
+.category-heading {
+  display: flex;
+  text-align: center;
+  margin-bottom: 2rem;
+  align-self: center;
+  font-size: 2rem;
+}
+
+.category-label {
+  margin-bottom: 1rem;
+  align-self: center;
 }
 
 .dashboard {
@@ -104,6 +111,47 @@ input {
   /* display: inline-block; */
   min-width: 20%;
   vertical-align: top;
+}
+
+.form-style {
+  display: flex;
+}
+
+.label-moods {
+  align-self: center;
+}
+
+.label-newline,
+select,
+input {
+  display: block;
+  margin: 0.5rem;
+}
+
+.mood-popup {
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  border: solid 1px magenta;
+  font-family: sans-serif;
+  background-color: lightcyan;
+}
+
+.mood-checklist {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  border: solid 1px magenta;
+  font-family: sans-serif;
+  background-color: burlywood;
+}
+
+.moods {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 33%;
 }
 
 .popup {
