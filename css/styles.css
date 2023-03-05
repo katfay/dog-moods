@@ -43,9 +43,9 @@ form {
 .add-expense-popup {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   align-self: center;
-  max-width: 500px;
+  max-width: 800px;
   margin: 1%;
   border: solid 1px silver;
   font-family: sans-serif;
@@ -142,9 +142,8 @@ input {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  border: solid 1px magenta;
+
   font-family: sans-serif;
-  background-color: burlywood;
 }
 
 .moods {

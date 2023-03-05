@@ -21,9 +21,9 @@
       <div class="popup" id="popUpWrap">
         <div class="add-expense-popup">
           <form class="form-style" id="" action="" method="">
-            <label class="test-border category-heading" for="category-select">What happened today?</label>
+            <label class="category-heading" for="category-select">What happened today?</label>
             <input class="" type="checkbox" id="mood" name="mood" />
-            <label class="test-border category-label" for="mood">moodꜛ</label>
+            <label class="category-label" for="mood">moodꜛ</label>
             <input type="checkbox" id="dogAction" name="dog action" />
             <label class="category-label" for="dogAction">dog actionꜛ</label>
             <input type="checkbox" id="medication" name="medication" />
@@ -33,11 +33,12 @@
             <input type="checkbox" id="weather" name="weather" />
             <label class="category-label" for="weather">weatherꜛ</label>
             <button class="next-button" type="button" id="categoryButton">Next (button)</button>
+          </form>
             <!-- Placeholder divider between different parts of this form -->
-            <div class="popup" id="popUpWrapMood">
+            <div class="popup.display: flex" id="popUpWrapMood">
               <div class="mood-popup test-border">
                 <form class="form-style" id="" action="" method="">
-                  <label class="test-border category-heading" for="">What mood is the good boy in?</label>
+                  <label class="category-heading" for="">What mood is the good boy in?</label>
                   <div class="mood-checklist">
                     <div class="moods">
                       <input type="checkbox" id="sulky" name="sulky">
@@ -101,20 +102,25 @@
                     </div>
                   </div>
                   <input class="next-button" type="submit" id="moodSubmit" value="Next (button)"></input>
+                </form>
               </div>
             </div>
-            <label for="dateEntered" class="label-newline"> Date </label>
-            <input name="date" id="dateEntered" type="date" placeholder="Date" />
-            <label for="messageEntered" class="label-newline"> Notes </label>
-            <input
-            name="notes"  
-            id="messageEntered"
-              type="text"
-              placeholder="e.g. 'Developed near fear: foam rollers 🤷🏼‍♀️ 🐾 💔'"
-            />
-            <input class="next-button" value="Add (button)" type="submit" id=""></input>
-          </form>
-          </form>
+            <div class="popup.display: flex" id="popUpWrapSubmit">
+              <div class="add-expense-popup test-border">
+                <form>
+                  <label for="dateEntered" class="label-newline"> Date </label>
+                  <input name="date" id="dateEntered" type="date" placeholder="Date" />
+                  <label for="messageEntered" class="label-newline"> Notes </label>
+                  <input
+                  name="notes"  
+                  id="messageEntered"
+                    type="text"
+                    placeholder="e.g. 'Developed near fear: foam rollers 🤷🏼‍♀️ 🐾 💔'"
+                  />
+                  <input class="next-button" value="Add (button)" type="submit" id=""></input>
+                </form>
+              </div>
+            </div>
         </div>
       </div>
       <div class="test-border dashboard">
