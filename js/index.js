@@ -1,3 +1,4 @@
+// This version works
 // First off, check index.js is connected to index.html
 console.log("js is working");
 
