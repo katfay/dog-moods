@@ -20,7 +20,7 @@
       <!-- The popup div wraps the add expense popup and visibility is toggled by the 'Add' button (Vanilla JS) -->
       <div class="popup" id="popUpWrap">
         <div class="add-expense-popup">
-          <form class="form-style" id="moodsId" action="http://localhost:3000/moods/" method="POST">
+          <form class="form-style" id="" action="" method="">
             <label class="category-heading" for="category-select">What happened today?</label>
             <input class="" type="checkbox" id="mood" name="mood" />
             <label class="category-label" for="mood">moodꜛ</label>
@@ -33,10 +33,11 @@
             <input type="checkbox" id="weather" name="weather" />
             <label class="category-label" for="weather">weatherꜛ</label>
             <button class="next-button" type="button" id="categoryButton">Next (button)</button>
-           <!-- Placeholder divider between different parts of this form -->
+          </form>
+            <!-- Placeholder divider between different parts of this form -->
             <div class="popup.display: flex" id="popUpWrapMood">
               <div class="mood-popup test-border">
-                <!-- <form class="form-style" id="" action="" method=""> -->
+                <form class="form-style" id="" action="" method="">
                   <label class="category-heading" for="">What mood is the good boy in?</label>
                   <div class="mood-checklist">
                     <div class="moods">
@@ -100,45 +101,46 @@
                       <label class="label-newline label-moods" for="contented">contented</label>
                     </div>
                   </div>
-                  <!-- <input class="next-button" type="submit" id="moodSubmit" value="Next (button)"></input> -->
-                
+                  <input class="next-button" type="submit" id="moodSubmit" value="Next (button)"></input>
+                </form>
               </div>
             </div>
             <div class="popup.display: flex" id="popUpWrapSubmit">
               <div class="add-expense-popup test-border">
-                <label for="dateEntered" class="label-newline"> Date </label>
-                <input name="date" id="dateEntered" type="date" placeholder="Date" />
-                <label for="messageEntered" class="label-newline"> Notes </label>
-                <input
-                name="notes"  
-                id="messageEntered"
-                  type="text"
-                  placeholder="e.g. 'Developed near fear: foam rollers 🤷🏼‍♀️ 🐾 💔'"
-                />
-                <input class="next-button" value="Add (button)" type="submit" id="finalSubmit"></input>
-          </form>
+                <form action="http://localhost:3000/dogMoods/" method="POST">
+                  <label for="dateEntered" class="label-newline"> Date </label>
+                  <input name="date" id="dateEntered" type="date" placeholder="Date" />
+                  <label for="messageEntered" class="label-newline"> Notes </label>
+                  <input
+                  name="notes"  
+                  id="messageEntered"
+                    type="text"
+                    placeholder="e.g. 'Developed near fear: foam rollers 🤷🏼‍♀️ 🐾 💔'"
+                  />
+                  <input class="next-button" value="Add (button)" type="button" id="finalSubmit"></input>
+                </form>
+              </div>
+            </div>
         </div>
       </div>
-    </div>
-    </div>
-    <div class="test-border dashboard">
-      <div class="dashboard-heading">
-        <span class="wider">Expense type</span> <span>Amount</span>
-        <span>Date</span>
-        <span class="wider">Notes</span>
-      </div>
-      <div class="dashboard-results" id="">
-        <!-- <div>Placeholder wrapper for show/hiding mood information</div> -->
-        <div class="wider" id="expenseTypes">placeholder</div>
-        <div class="" id="expenseAmounts">placeholder</div>
-        <div class="" id="expenseDates">placeholder</div>
-        <div class="wider" id="expenseNotes">placeholder</div>
-      </div>  
-      <div>
-        <button class="" type="button" id="showButton">
-        Show Duncan's mood dashboard (button)
-        </button>
-      </div>
+      <div class="test-border dashboard">
+        <div class="dashboard-heading">
+          <span class="wider">Expense type</span> <span>Amount</span>
+          <span>Date</span>
+          <span class="wider">Notes</span>
+        </div>
+        <div class="dashboard-results" id="">
+          <!-- <div>Placeholder wrapper for show/hiding mood information</div> -->
+          <div class="wider" id="expenseTypes">placeholder</div>
+          <div class="" id="expenseAmounts">placeholder</div>
+          <div class="" id="expenseDates">placeholder</div>
+          <div class="wider" id="expenseNotes">placeholder</div>
+        </div>  
+        <div>
+          <button class="" type="button" id="showButton">
+          Show Duncan's mood dashboard (button)
+          </button>
+        </div>
     </div>
     <script src="./js/index.js"></script>
   </body>

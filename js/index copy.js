@@ -3,8 +3,6 @@ console.log("js is working");
 
 // CUSTOM FUNCTIONS
 
-// fetch endpoint =  moods/list
-
 // Show the 'Add' button on the main dashboard after the user clicks the 'Add Expense' button in the 'Add an expense' popup
 function showAddButton() {
   // Check the function has been called
