@@ -35,20 +35,11 @@ function showAllWhatHappened(data) {
   let whatHappenedElement = document.getElementById("what");
   let whatHappenedHTML = `<div>`;
   data.forEach(function (moodItem) {
+    console.log(moodItem.what);
     whatHappenedHTML = whatHappenedHTML + `<div>${moodItem.what}</div>`;
   });
   whatHappenedHTML = whatHappenedHTML + `</div>`;
   whatHappenedElement.innerHTML = whatHappenedHTML;
-}
-
-function showAllTypes(data) {
-  let typesElement = document.getElementById("types");
-  let typesHTML = `<div>`;
-  data.forEach(function (moodItem) {
-    typesHTML = typesHTML + `<div>${moodItem.type}</div>`;
-  });
-  typesHTML = typesHTML + `</div>`;
-  typesElement.innerHTML = typesHTML;
 }
 
 function showAllDates(data) {
