@@ -5,6 +5,25 @@ console.log("js is working");
 
 // fetch endpoint =  moods/list
 
+// Retrieve the user's expenses from the database
+function retrieveMoods() {
+  // Fetch the file containing the user's responses to the 'Add an expense' form. This is first retrieved from the cloud database and then hosted on a local server as an API, using a middleware function.
+  fetch("http://localhost:3000/moods/list")
+    // Convert the fetched response to a JSON format.
+    .then((res) => res.json())
+    // Pass this JSON response through my custom function
+    .then((data) => {
+      console.log(data);
+      // See the user's expenses in JSON format in a table in the console so I can debug
+      console.table(data);
+      // Call custom functions that will put the user's responses about expense types, $$, amounts and notes into the frontend (in the 'Spending dashboard')
+      // showAllExpenseTypes(data);
+      // showAllExpenseAmounts(data);
+      // showAllExpenseDates(data);
+      // showAllExpenseNotes(data);
+    });
+}
+
 // Show the 'Add' button on the main dashboard after the user clicks the 'Add Expense' button in the 'Add an expense' popup
 function showAddButton() {
   // Check the function has been called
@@ -54,7 +73,5 @@ addButton.addEventListener("click", handleAddButtonClick);
 let addMoodButton = document.getElementById("finalSubmit");
 addMoodButton.addEventListener("click", hidePopUp);
 
-//  Set the 'Show my spending' button (on the main dashboard) to call a function when it is clicked
-// document
-//   .getElementById("showButton")
-//   .addEventListener("click", myFunction);
+//  Set the 'Show dogMoods' button (on the main dashboard) to call a function when it is clicked
+document.getElementById("showButton").addEventListener("click", retrieveMoods);
