@@ -3,7 +3,63 @@ console.log("js is working");
 
 // CUSTOM FUNCTIONS
 
-// fetch endpoint =  moods/list
+function showAllNotes(data) {
+  // Assign a variable to the empty 'Expense type' column in the 'Spending dashboard'
+  let notesElement = document.getElementById("notes");
+  //  Assign a variable to a new object that contains only the opening tag of an HTML div
+  let notesHTML = `<div>`;
+  // Loop through each of the user's exenses. These are the array items in the data object
+  data.forEach(function (moodItem) {
+    //  Prepare to show each  expense (type) in newly created divs. Update the variable for the new div object so that during each loops, the existing object remains, but a new div is appended to show the expense (type) from the user's expense (array item) that is currently being looped through. The expense (type) value will show inside the newly appended div.
+    notesHTML = notesHTML + `<div>${moodItem.notes}</div>`;
+  });
+  // Add a closing div tag to the end of the newly created div that contains all the individual loops' expense values.
+  notesHTML = notesHTML + `</div>`;
+  // Put all the expense values into the frontend, by putting in the newly created and updated object.
+  notesElement.innerHTML = notesHTML;
+  // Print that object on the console for debugging.
+  // console.log(expenseHTML);
+}
+
+function showAllTypes(data) {
+  let typesElement = document.getElementById("types");
+  let typesHTML = `<div>`;
+  data.forEach(function (moodItem) {
+    typesHTML = typesHTML + `<div>${moodItem.type}</div>`;
+  });
+  typesHTML = typesHTML + `</div>`;
+  typesElement.innerHTML = typesHTML;
+}
+
+function showAllWhatHappened(data) {
+  let whatHappenedElement = document.getElementById("what");
+  let whatHappenedHTML = `<div>`;
+  data.forEach(function (moodItem) {
+    whatHappenedHTML = whatHappenedHTML + `<div>${moodItem.what}</div>`;
+  });
+  whatHappenedHTML = whatHappenedHTML + `</div>`;
+  whatHappenedElement.innerHTML = whatHappenedHTML;
+}
+
+function showAllTypes(data) {
+  let typesElement = document.getElementById("types");
+  let typesHTML = `<div>`;
+  data.forEach(function (moodItem) {
+    typesHTML = typesHTML + `<div>${moodItem.type}</div>`;
+  });
+  typesHTML = typesHTML + `</div>`;
+  typesElement.innerHTML = typesHTML;
+}
+
+function showAllDates(data) {
+  let datesElement = document.getElementById("dates");
+  let datestHTML = `<div>`;
+  data.forEach(function (moodItem) {
+    datestHTML = datestHTML + `<div>${moodItem.date}</div>`;
+  });
+  datestHTML = datestHTML + `</div>`;
+  datesElement.innerHTML = datestHTML;
+}
 
 // Retrieve the user's expenses from the database
 function retrieveMoods() {
@@ -17,10 +73,10 @@ function retrieveMoods() {
       // See the user's expenses in JSON format in a table in the console so I can debug
       console.table(data);
       // Call custom functions that will put the user's responses about expense types, $$, amounts and notes into the frontend (in the 'Spending dashboard')
-      // showAllExpenseTypes(data);
-      // showAllExpenseAmounts(data);
-      // showAllExpenseDates(data);
-      // showAllExpenseNotes(data);
+      showAllDates(data);
+      showAllTypes(data);
+      showAllWhatHappened(data);
+      showAllNotes(data);
     });
 }
 
