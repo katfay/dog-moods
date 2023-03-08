@@ -6,18 +6,14 @@ font-family: 'Syne Tactile', cursive;
 font-family: 'Tilt Warp', cursive;
 font-family: 'Titan One', cursive; */
 
-.container {
-  overflow: hidden;
-}
-
-.infinite-scrolling {
+/* .infinite-scrolling {
   background: url("../img/abstract-border-collie-dog-portrait-in-low-poly-vector-design.svg")
     repeat-x;
   height: 645px;
   width: 5760px; /* The image width times 3 */
-
+/* 
   animation: slide 60s linear infinite;
-}
+} */
 
 /* .test-border {
   border: solid 1px salmon;
@@ -26,8 +22,6 @@ font-family: 'Titan One', cursive; */
 .main-container {
   margin: 5%;
   margin-bottom: 0%;
-  position: relative;
-  top: -120rem;
   display: flex;
   flex-flow: column;
 }
@@ -46,6 +40,7 @@ form {
 
 body {
   font-family: sans-serif;
+  background-image: url(../img/abstract-border-collie-dog-portrait-in-low-poly-vector-design.svg);
 }
 
 button {
@@ -281,21 +276,10 @@ input {
 .site-banner {
   color: #f2c8db;
   width: 50%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  /* padding-top: 2rem;
+  padding-bottom: 2rem; */
   text-align: center;
-  font-size: 6rem;
-}
-
-/* .wider {
-  min-width: 30%;
-} */
-
-@media (min-width: 600px) {
-  .add-button button {
-    min-width: 7.5rem;
-    margin: 0;
-  }
+  font-size: 2rem;
 }
 
 @keyframes slide {
@@ -304,5 +288,49 @@ input {
   }
   100% {
     transform: translate3d(-1920px, 0, 0); /* The image width */
+  }
+}
+
+@media (min-width: 600px) {
+  .add-button button {
+    min-width: 7.5rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 600px) {
+  .container {
+    overflow: hidden;
+  }
+
+  .infinite-scrolling {
+    background: url("../img/abstract-border-collie-dog-portrait-in-low-poly-vector-design.svg")
+      repeat-x;
+    height: 645px;
+    width: 5760px; /* The image width times 3 */
+
+    animation: slide 60s linear infinite;
+  }
+
+  /* .test-border {
+  border: solid 1px salmon;
+} */
+
+  .main-container {
+    margin: 5%;
+    margin-bottom: 0%;
+    position: relative;
+    top: -120rem;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .site-banner {
+    color: #f2c8db;
+    width: 50%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 6rem;
   }
 }
