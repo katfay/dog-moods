@@ -5,12 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Rampart+One&family=Syne+Tactile&family=Tilt+Warp&family=Titan+One&display=swap" rel="stylesheet">
     <title>Dog mood tracker 🐾 🌈 🌩 🎻 (🍦JS)</title>
   </head>
   <body>
+    <div class=".container">
+      <div class="infinite-scrolling"></div>
+    </div>
+        <div class=".container">
+      <div class="infinite-scrolling"></div>
+    </div>
+    
     <div class="test-border main-container">
       <div class="banner">
-        <header class="site-banner">dogMoods</header>
+        <header class="site-banner">🐾 dogMoods 🐾</header>
       </div>
       <div class="add-button-div" id="addButtonWrap">
         <button class="add-button" type="button" id="addButton">
@@ -39,7 +49,7 @@
             <div class="popup" id="popUpMoodsWrap">
               <div class="mood-popup test-border">
                 <!-- <form class="form-style" id="" action="" method=""> -->
-                  <label class="category-heading" for="">What mood is the good boy in?</label>
+                  <label class="category-heading" for="">Which mood?</label>
                   <div class="mood-checklist">
                     <div class="moods">
                       <input type="checkbox" id="sulky" name="moodName" value="sulky">
@@ -137,7 +147,7 @@
       <div class="dashboard-body" id="dashboardBody">
         <div class="dashboard test-border">
             <div class="dashboard-heading">
-                <span class="">Date</span> <span>What happened?</span>
+                <span class="">Date</span> <span>Category</span>
                 <span class="wider">Type</span>
                 <span class="wider">Notes</span>
             </div>
@@ -154,5 +164,6 @@
       </div>
     </div>
     <script src="./js/index.js"></script>
+    </div>
   </body>
 </html>

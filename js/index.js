@@ -69,6 +69,8 @@ function retrieveMoods() {
       showAllWhatHappened(data);
       showAllNotes(data);
     });
+  let moodsDashboard = document.getElementById("dashboardBody");
+  moodsDashboard.style.display = "flex";
 }
 
 // Show the 'Add' button on the main dashboard after the user clicks the 'Add Expense' button in the 'Add an expense' popup

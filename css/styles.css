@@ -1,3 +1,24 @@
+/* <a href="https://www.vecteezy.com/vector-art/7633071-cartoon-colorful-panorama-of-spring-summer-beautiful-nature-green-grasslands-meadow-with-mountains-on-horizon-background-summer-mountain-landscape-dawn-over-the-valley-vector-illustration">Cartoon colorful panorama of spring summer beautiful nature, green grasslands meadow with mountains on horizon background, summer mountain landscape, dawn over the valley. Vector illustration Vectors by Vecteezy</a> */
+
+/* font-family: 'Poiret One', cursive;
+font-family: 'Rampart One', cursive;
+font-family: 'Syne Tactile', cursive;
+font-family: 'Tilt Warp', cursive;
+font-family: 'Titan One', cursive; */
+
+.container {
+  overflow: hidden;
+}
+
+.infinite-scrolling {
+  background: url("https://static.vecteezy.com/system/resources/previews/001/928/973/original/rural-nature-road-scene-free-vector.jpg")
+    repeat-x;
+  height: 645px;
+  width: 5760px; /* The image width times 3 */
+
+  animation: slide 60s linear infinite;
+}
+
 .test-border {
   border: solid 1px salmon;
 }
@@ -5,9 +26,10 @@
 .main-container {
   margin: 5%;
   margin-bottom: 0%;
+  position: relative;
+  top: -80rem;
   display: flex;
   flex-flow: column;
-  background-color: silver;
 }
 
 a {
@@ -20,6 +42,16 @@ form {
   flex-flow: column;
   align-items: stretch;
   min-width: 100%;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+button {
+  font-family: "Tilt Warp", cursive;
+  font-size: 2rem;
+  color: gray;
 }
 
 button:active,
@@ -35,6 +67,19 @@ button:hover,
   transform: scale(1.2);
   box-shadow: 10px 10px 10px rgb(152 180 199 / 50%);
   background-color: #f3334e;
+}
+
+input::placeholder {
+  color: gray;
+}
+
+select,
+input {
+  min-height: 4rem;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  color: gray;
 }
 
 .add-button-div {
@@ -70,31 +115,9 @@ button:hover,
   background-color: bisque;
 }
 
-.show-details-popup {
-  display: none;
-  flex-direction: column;
-  /* align-items: stretch; */
-  align-self: center;
-  min-width: 80%;
-  max-width: 800px;
-  margin: 1%;
-  border: solid 1px silver;
-  /* font-family: sans-serif; */
-  background-color: bisque;
-}
-
-body {
-  font-family: sans-serif;
-}
-
-select,
-input {
-  min-height: 2rem;
-  text-align: center;
-}
-
 .banner {
   margin: 1%;
+  font-family: "Tilt Warp", cursive;
 }
 
 .category-heading {
@@ -103,6 +126,7 @@ input {
   margin-bottom: 2rem;
   align-self: center;
   font-size: 2rem;
+  font-family: "Tilt Warp", cursive;
 }
 
 .category-label {
@@ -114,17 +138,23 @@ input {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  min-width: 98%;
   margin: 1%;
 }
 
 .dashboard .dashboard-heading {
+  margin-bottom: 1rem;
   font-weight: bold;
   display: flex;
+  font-family: "Tilt Warp", cursive;
+  font-size: 1.5rem;
 }
 /* Setting min. width for headings of expense results */
 .dashboard .dashboard-heading span {
   display: flex;
   min-width: 20%;
+  overflow: hidden;
+
   /* border: 1px red solid; */
 }
 
@@ -139,6 +169,7 @@ input {
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  overflow: hidden;
 }
 
 /* Setting min. width for all side-by-side expense results divs */
@@ -146,6 +177,15 @@ input {
   /* display: inline-block; */
   min-width: 20%;
   vertical-align: top;
+  overflow: hidden;
+  padding-right: 0.1rem;
+  padding-bottom: 0.5rem;
+}
+
+.dashboard-body {
+  display: none;
+  min-width: 90%;
+  background-color: white;
 }
 
 .form-style {
@@ -188,6 +228,11 @@ input {
   width: 33%;
 }
 
+.next-button {
+  font-family: "Tilt Warp", cursive;
+  font-size: 2rem;
+}
+
 .popup {
   /* display: flex; */
   display: none;
@@ -196,11 +241,24 @@ input {
   border: solid 2px paleturquoise;
 }
 
+.show-details-popup {
+  display: none;
+  flex-direction: column;
+  /* align-items: stretch; */
+  align-self: center;
+  min-width: 80%;
+  max-width: 800px;
+  margin: 1%;
+  border: solid 1px silver;
+  /* font-family: sans-serif; */
+  background-color: bisque;
+}
+
 .site-banner {
   background-color: pink;
   align-self: stretch;
   text-align: center;
-  font-size: 2rem;
+  font-size: 6rem;
 }
 
 /* .wider {
@@ -211,5 +269,14 @@ input {
   .add-button button {
     min-width: 7.5rem;
     margin: 0;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1920px, 0, 0); /* The image width */
   }
 }
