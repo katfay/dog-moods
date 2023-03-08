@@ -25,7 +25,9 @@ function showAllTypes(data) {
   let typesElement = document.getElementById("types");
   let typesHTML = `<div>`;
   data.forEach(function (moodItem) {
-    typesHTML = typesHTML + `<div>${moodItem.type}</div>`;
+    moodItem.moodName.forEach(function (item) {
+      typesHTML = typesHTML + `<div>${item}</div>`;
+    });
   });
   typesHTML = typesHTML + `</div>`;
   typesElement.innerHTML = typesHTML;
@@ -35,8 +37,8 @@ function showAllWhatHappened(data) {
   let whatHappenedElement = document.getElementById("what");
   let whatHappenedHTML = `<div>`;
   data.forEach(function (moodItem) {
-    console.log(moodItem.what);
-    whatHappenedHTML = whatHappenedHTML + `<div>${moodItem.what}</div>`;
+    console.log(moodItem.category);
+    whatHappenedHTML = whatHappenedHTML + `<div>${moodItem.category}</div>`;
   });
   whatHappenedHTML = whatHappenedHTML + `</div>`;
   whatHappenedElement.innerHTML = whatHappenedHTML;
