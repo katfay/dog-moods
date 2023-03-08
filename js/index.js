@@ -90,9 +90,15 @@ function hidePopUp() {
   showAddButton();
 }
 
+function hideMoodPopUp() {
+  let moodsWrap = document.getElementById("popUpMoodsWrap");
+  moodsWrap.style.display = "none";
+}
+
 function showDetailsPopUp() {
   let detailsWrap = document.getElementById("popUpDetailsWrap");
   detailsWrap.style.display = "flex";
+  hideMoodPopUp();
 }
 
 function hideCategoryDiv() {
