@@ -22,6 +22,21 @@ form {
   min-width: 100%;
 }
 
+button:active,
+.next-button:active {
+  transform: scale(1.2);
+  box-shadow: 5px 5px 5px rgb(152 180 199 / 50%);
+  background-color: #f3334e;
+}
+
+button:hover,
+.next-button:hover {
+  transition: all ease-in-out 0.8s;
+  transform: scale(1.2);
+  box-shadow: 10px 10px 10px rgb(152 180 199 / 50%);
+  background-color: #f3334e;
+}
+
 .add-button-div {
   display: flex;
   justify-content: center;
