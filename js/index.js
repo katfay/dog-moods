@@ -84,18 +84,41 @@ function showAddButton() {
 //  Hide the 'Add' popup on the dashboard when the 'Add' button is clicked
 function hidePopUp() {
   // Assign a variable name to the div wrapping the 'Add an expense' popup
-  let popUpWrap = document.getElementById("popUpWrap");
+  let popUpMainWrap = document.getElementById("popUpMainWrap");
   // Hide the popup by changing its wrapper's CSS display setting
-  popUpWrap.style.display = "none";
+  popUpMainWrap.style.display = "none";
   showAddButton();
 }
 
+function showDetailsPopUp() {
+  let detailsWrap = document.getElementById("popUpDetailsWrap");
+  detailsWrap.style.display = "flex";
+}
+
+function hideCategoryDiv() {
+  let categoryWrap = document.getElementById("popUpCategory");
+  categoryWrap.style.display = "none";
+}
+
+function toggleMoodPopUp() {
+  let moodsWrap = document.getElementById("popUpMoodsWrap");
+  moodsWrap.style.display = "flex";
+
+  // Troubleshoot this toggle functioun later
+  // if ((moodsWrap.style.display = "none")) {
+  //   moodsWrap.style.display = "flex";
+  // } else if ((moodsWrap.style.display = "flex")) {
+  //   moodsWrap.style.display = "none";
+  // }
+  hideCategoryDiv();
+}
+
 // Show the 'Add an Expense' popup on the dashboard when the 'Add' button is clicked
-function showPopUp() {
+function showCategoryPopUp() {
   // Assign a variable name to the div wrapping the 'Add an expense' popup
-  let popUpWrap = document.getElementById("popUpWrap");
+  let popUpMainWrap = document.getElementById("popUpMainWrap");
   // Show the popup by changing its wrapper's CSS display setting
-  popUpWrap.style.display = "flex";
+  popUpMainWrap.style.display = "flex";
 }
 
 // Hide the 'Add' button when it is clicked
@@ -107,7 +130,7 @@ function handleAddButtonClick() {
   // Hide the 'Add' button by changing its wrapper's CSS display setting
   addButtonWrap.style.display = "none";
   // Call a function to show the popUp wrapper
-  showPopUp();
+  showCategoryPopUp();
 }
 
 // LISTENERS ON THE HOME PAGE
@@ -115,6 +138,13 @@ function handleAddButtonClick() {
 // Set the 'Add' button (on the main dashboard) to call a function when it is clicked
 let addButton = document.getElementById("addButton");
 addButton.addEventListener("click", handleAddButtonClick);
+
+// Set the 'Next' button (inside the  popup) to call a function when it is clicked
+let moodCheckbox = document.getElementById("moodCheckboxSelect");
+moodCheckbox.addEventListener("change", toggleMoodPopUp);
+
+let nextButton = document.getElementById("nextButton");
+nextButton.addEventListener("click", showDetailsPopUp);
 
 // Set the 'Add' button (inside the  popup) to call a function when it is clicked
 let addMoodButton = document.getElementById("finalSubmit");

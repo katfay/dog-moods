@@ -10,31 +10,33 @@
   <body>
     <div class="test-border main-container">
       <div class="banner">
-        <header class="site-banner">Dog mood tracker 🐾 🌈 🌩 🎻 (🍦JS) dashboard</header>
+        <header class="site-banner">dogMoods</header>
       </div>
       <div class="add-button-div" id="addButtonWrap">
         <button class="add-button" type="button" id="addButton">
-          Add (button)
+          Add a mood
         </button>
       </div>
       <!-- The popup div wraps the add expense popup and visibility is toggled by the 'Add' button (Vanilla JS) -->
-      <div class="popup" id="popUpWrap">
-        <div class="add-expense-popup">
-          <form class="form-style" id="moodsId" action="http://localhost:3000/moods/" method="POST">
-            <label class="category-heading" for="category-select">What happened today?</label>
-            <input class="" type="checkbox" id="mood" name="category" value="mood" />
-            <label class="category-label" for="mood">mood</label>
-            <input type="checkbox" id="dogAction" name="category" value="dog action" />
-            <label class="category-label" for="dogAction">dog action</label>
-            <input type="checkbox" id="medication" name="category" value="medication" />
-            <label class="category-label" for="medication">medication</label>
-            <input type="checkbox" id="event" name="category" value="event" />
-            <label class="category-label" for="event">event</label>
-            <input type="checkbox" id="weather" name="category" value="weather" />
-            <label class="category-label" for="weather">weather</label>
-            <button class="next-button" type="button" id="categoryButton">Next (button)</button>
+      <!-- <div class="popup" id=""> -->
+        <div class="add-category-popup" id="popUpMainWrap">
+          <div class="category-popup" id="popUpCategory">
+            <form class="form-style" id="moodsId" action="http://localhost:3000/moods/" method="POST">
+              <label class="category-heading" for="category-select">What happened?</label>
+              <input class="" type="checkbox" id="moodCheckboxSelect" name="category" value="mood" />
+              <label class="category-label" for="mood">mood</label>
+              <input type="checkbox" id="dogAction" name="category" value="dog action" />
+              <label class="category-label" for="dogAction">action</label>
+              <input type="checkbox" id="medication" name="category" value="medication" />
+              <label class="category-label" for="medication">medication</label>
+              <input type="checkbox" id="event" name="category" value="event" />
+              <label class="category-label" for="event">event</label>
+              <input type="checkbox" id="weather" name="category" value="weather" />
+              <label class="category-label" for="weather">weather</label>
+              <button class="next-button" type="button" id="categoryButton">Next</button>
+          </div>
            <!-- Placeholder divider between different parts of this form -->
-            <div class="popup.display: flex" id="">
+            <div class="popup" id="popUpMoodsWrap">
               <div class="mood-popup test-border">
                 <!-- <form class="form-style" id="" action="" method=""> -->
                   <label class="category-heading" for="">What mood is the good boy in?</label>
@@ -99,44 +101,49 @@
                       <input type="checkbox" id="contented" name="moodName" value="contented">
                       <label class="label-newline label-moods" for="contented">contented</label>
                     </div>
+                    <!-- Delete <div> below? -->
                   </div>
-                  <!-- <input class="next-button" type="submit" id="moodSubmit" value="Next (button)"></input> -->
-                
-              </div>
+                  <div class="add-button-div">
+                    <button class="next-button" type="button" id="nextButton">Next</button>
+                  </div>
             </div>
-            <div class="popup.display: flex" id="">
-              <div class="add-expense-popup test-border">
-                <label for="dateEntered" class="label-newline"> Date </label>
-                <input name="date" id="dateEntered" type="date" placeholder="Date" />
-                <label for="messageEntered" class="label-newline"> Notes </label>
-                <input
-                name="notes"  
-                id="messageEntered"
-                  type="text"
-                  placeholder="e.g. 'Developed near fear: foam rollers 🤷🏼‍♀️ 🐾 💔'"
-                />
-                <input class="next-button" value="Add (button)" type="submit" id="finalSubmit"></input>
-          </form>
-        </div>
-      </div>
+          </div> 
+          <!-- Divider between parts of form -->
+          <div class="show-details-popup test-border" id="popUpDetailsWrap">
+            <label for="dateEntered" class="label-newline"> Date </label>
+            <input name="date" id="dateEntered" type="date" placeholder="Date" />
+            <label for="messageEntered" class="label-newline"> Notes </label>
+            <input
+            name="notes"  
+            id="messageEntered"
+              type="text"
+              placeholder="e.g. 'Developed near fear: foam rollers 🤷🏼‍♀️ 🐾 💔'"
+            />
+            <input class="next-button" value="Add" type="submit" id="finalSubmit"></input>
+            </form>
+          </div>
+    <!-- Divider between section divs -->
     </div>
-    </div>
-    <div class="test-border dashboard">
+  
+    <!-- Divider between section divs -->
+  <div class="test-border dashboard">
       <div class="dashboard-heading">
         <span class="">Date</span> <span>What happened?</span>
         <span class="wider">Type</span>
         <span class="wider">Notes</span>
       </div>
+    <!-- Divider between section divs -->
       <div class="dashboard-results" id="">
+        
         <!-- <div>Placeholder wrapper for show/hiding mood information</div> -->
         <div class="" id="dates">dev-test</div>
         <div class="" id="what">placeholder</div>
         <div class="wider" id="types">placeholder</div>
         <div class="wider" id="notes">placeholder</div>
       </div>  
-      <div>
-        <button class="" type="button" id="showButton">
-        Show Duncan's mood dashboard (button)
+      <div class="add-button-div">
+        <button class="next-button" type="button" id="showButton">
+        Show mood tracker
         </button>
       </div>
     </div>

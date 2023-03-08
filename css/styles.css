@@ -4,8 +4,10 @@
 
 .main-container {
   margin: 5%;
+  margin-bottom: 0%;
   display: flex;
   flex-flow: column;
+  background-color: silver;
 }
 
 a {
@@ -40,16 +42,34 @@ form {
   border-style: none;
 }
 
-.add-expense-popup {
-  display: flex;
+.add-category-popup {
+  display: none;
   flex-direction: column;
-  align-items: stretch;
+  /* align-items: stretch; */
   align-self: center;
+  min-width: 80%;
   max-width: 800px;
   margin: 1%;
   border: solid 1px silver;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   background-color: bisque;
+}
+
+.show-details-popup {
+  display: none;
+  flex-direction: column;
+  /* align-items: stretch; */
+  align-self: center;
+  min-width: 80%;
+  max-width: 800px;
+  margin: 1%;
+  border: solid 1px silver;
+  /* font-family: sans-serif; */
+  background-color: bisque;
+}
+
+body {
+  font-family: sans-serif;
 }
 
 select,
@@ -133,7 +153,7 @@ input {
   flex-direction: column;
   margin: 1%;
   border: solid 1px magenta;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   background-color: lightcyan;
 }
 
@@ -143,7 +163,7 @@ input {
   flex-wrap: wrap;
   align-items: center;
 
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
 }
 
 .moods {
@@ -157,6 +177,7 @@ input {
   /* display: flex; */
   display: none;
   justify-content: center;
+  flex-direction: column;
   border: solid 2px paleturquoise;
 }
 
@@ -164,6 +185,7 @@ input {
   background-color: pink;
   align-self: stretch;
   text-align: center;
+  font-size: 2rem;
 }
 
 /* .wider {
