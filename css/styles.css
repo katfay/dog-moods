@@ -11,7 +11,7 @@ font-family: 'Titan One', cursive; */
 }
 
 .infinite-scrolling {
-  background: url("https://static.vecteezy.com/system/resources/previews/001/928/973/original/rural-nature-road-scene-free-vector.jpg")
+  background: url("../img/abstract-border-collie-dog-portrait-in-low-poly-vector-design.svg")
     repeat-x;
   height: 645px;
   width: 5760px; /* The image width times 3 */
@@ -19,15 +19,15 @@ font-family: 'Titan One', cursive; */
   animation: slide 60s linear infinite;
 }
 
-.test-border {
+/* .test-border {
   border: solid 1px salmon;
-}
+} */
 
 .main-container {
   margin: 5%;
   margin-bottom: 0%;
   position: relative;
-  top: -80rem;
+  top: -120rem;
   display: flex;
   flex-flow: column;
 }
@@ -51,7 +51,9 @@ body {
 button {
   font-family: "Tilt Warp", cursive;
   font-size: 2rem;
+  /* color: #a35f4e; */
   color: gray;
+  background-color: lightgray;
 }
 
 button:active,
@@ -59,6 +61,7 @@ button:active,
   transform: scale(1.2);
   box-shadow: 5px 5px 5px rgb(152 180 199 / 50%);
   background-color: #f3334e;
+  color: #f2c8db;
 }
 
 button:hover,
@@ -67,10 +70,15 @@ button:hover,
   transform: scale(1.2);
   box-shadow: 10px 10px 10px rgb(152 180 199 / 50%);
   background-color: #f3334e;
+  color: #f2c8db;
 }
 
 input::placeholder {
   color: gray;
+}
+
+label {
+  font-size: 1.5rem;
 }
 
 select,
@@ -107,17 +115,18 @@ input {
   flex-direction: column;
   /* align-items: stretch; */
   align-self: center;
-  min-width: 80%;
+  min-width: 50%;
   max-width: 800px;
   margin: 1%;
-  border: solid 1px silver;
+  /* border: solid 1px silver; */
   /* font-family: sans-serif; */
-  background-color: bisque;
 }
 
 .banner {
   margin: 1%;
   font-family: "Tilt Warp", cursive;
+  justify-content: center;
+  display: flex;
 }
 
 .category-heading {
@@ -127,6 +136,13 @@ input {
   align-self: center;
   font-size: 2rem;
   font-family: "Tilt Warp", cursive;
+}
+
+.category-popup {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 1rem;
+  /* background-color: #f2c8db; */
 }
 
 .category-label {
@@ -185,7 +201,9 @@ input {
 .dashboard-body {
   display: none;
   min-width: 90%;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 0.5rem;
 }
 
 .form-style {
@@ -207,9 +225,11 @@ input {
   display: flex;
   flex-direction: column;
   margin: 1%;
-  border: solid 1px magenta;
+  padding: 1rem;
+  /* border: solid 1px magenta; */
   /* font-family: sans-serif; */
-  background-color: lightcyan;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
 }
 
 .mood-checklist {
@@ -231,6 +251,8 @@ input {
 .next-button {
   font-family: "Tilt Warp", cursive;
   font-size: 2rem;
+  color: gray;
+  background-color: lightgray;
 }
 
 .popup {
@@ -238,25 +260,29 @@ input {
   display: none;
   justify-content: center;
   flex-direction: column;
-  border: solid 2px paleturquoise;
+  /* border: solid 2px paleturquoise; */
 }
 
 .show-details-popup {
   display: none;
   flex-direction: column;
+  padding: 2rem;
   /* align-items: stretch; */
   align-self: center;
-  min-width: 80%;
+  min-width: 100%;
   max-width: 800px;
   margin: 1%;
-  border: solid 1px silver;
+  /* border: solid 1px silver; */
   /* font-family: sans-serif; */
-  background-color: bisque;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
 }
 
 .site-banner {
-  background-color: pink;
-  align-self: stretch;
+  color: #f2c8db;
+  width: 50%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   text-align: center;
   font-size: 6rem;
 }
