@@ -55,7 +55,7 @@ function showAllDates(data) {
 // Retrieve the user's expenses from the database
 function retrieveMoods() {
   // Fetch the file containing the user's responses to the 'Add an expense' form. This is first retrieved from the cloud database and then hosted on a local server as an API, using a middleware function.
-  fetch("http://localhost:3000/moods/list")
+  fetch("https://dog-moods-backend.onrender.com/moods/list")
     // Convert the fetched response to a JSON format.
     .then((res) => res.json())
     // Pass this JSON response through my custom function
